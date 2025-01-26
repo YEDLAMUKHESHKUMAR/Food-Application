@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* .heading {
+  color: red;
+}
+
+.header {
+  display: flex;
+  border: 1px solid black;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 80px;
+}
+.nav-items ul {
+  font-size: 18px;
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-items ul li {
+  padding: 10px;
+}
+
+.restro-container {
+  display: flex;
+
+  flex-wrap: wrap;
+}
+.restro-container a {
+  text-decoration: none;
+  color: black;
+}
+.res-card {
+  margin: 5px;
+  width: 200px;
+  padding: 5px;
+  background-color: #f0f0f0;
+}
+.res-card:hover {
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.res-logo {
+  width: 100%;
+}
+
+
+
+.shimmer-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.shimmer-card {
+  margin: 5px;
+  width: 200px;
+  height: 440px;
+  padding: 5px;
+  background-color: #f0f0f0;
+}
+
+
+
+.login {
+  padding: 1px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+.errImage {
+  margin-left: 200px;
+  width: 70%;
+}
+.err-container {
+  min-height: calc(100vh - 229px);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.tot-err {
+  text-align: center;
+  width: 430px;
+  line-height: 1.25;
+  padding: 120px 0;
+}
+.errorImage {
+  background-image: url(https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/connection_error_bsppck);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 260px;
+}
+
+.retry-btn {
+  background-color: #fc8019;
+  color: white;
+  padding: 10px 28px;
+  font-size: 17px;
+  border: none;
+  font-weight: 600;
+}
+.retry-btn a {
+  text-decoration: none;
+  color: white;
+} */

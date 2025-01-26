@@ -1,0 +1,69 @@
+    swiggy data --> 881
+
+0 --> importing react and reactDOM from node_modules
+1 -->  createElement will create object and while rendering it , it will convert into respected createdElement
+
+2--> // created heading
+// const heading = React.createElement("h1",{class:"heading"},"Intro to react");
+  // just creating h1 element...It's core thing , so we use React
+// put root into react root ... react root is used for every piece of code that we are going to write . means we render everything into root 
+
+3--->   // here we use dom since we want to put it into our browser.. so we use ReactDom..
+
+4-->// then push heading to root which is presented in react root 
+5--> // this render will change the heading object into an actual heading
+6--> Babel converts JSX syntax to react Element 
+
+7-->  const arr = useState(resList);
+  const RatingRestro = arr[0];
+  const setRatingRestro = arr[1];  You can also write like this
+    
+     
+8 ---> // if dependency is not there at all(no [])..then useEffect will be called everytime the body renders
+            // if dependency is there but empty then useEffect will be called only one time .
+            // if dependency has value in it , then it will be called everytime the value changed . 
+
+9---> This will get the error in the form of object , so we can know what excatly the error is----------> simply it is used to catch the error
+10---> This will retrieve the current path from url
+
+11---> ComponentDidMount is similar to useEffect but both are not same it invokes after  rendering of component . 
+Ok but what if we want to call it every time like we did in useEffect using dependency arrray..
+For that we use "ComponentDidUpdate" -- this will be called every time a render happens...
+Ok but what if we want to invoke it only when state changes? 
+In useEffect we use dependency array [state]...
+But in classBased component we use ComponentDidUpdate again...but  with second argument as prevProps and prevState ..
+So, ComponentDidUpdate will be invoked only when component mounts or whenever state changes.. 
+Then how would we know whether the state changed or not in classBased component...
+We used to write if condition for every state for which we wanted to invoke ComponentDidUpdate by using prevState
+
+12----> finalize the contract --- means , you should know about the input and output for the custom hook.then it becomes easier
+13-->i am storing the entire withVegLabel component by passing the Restaurant card in it...
+13.1-->  and here we pass our component with props ... -> 13.2 is in restaurandCard.js 
+13.2 --->  we received props from 13.1 
+13.3 --->  Here we send the props we recieved from 13.1 and send it to RestaurantCard .. because we want our restaurantCard right? .. our goal is just to add veg label top of it without changing the data
+
+14 --> every restroCategory will get their own setShowIndex and ShowItems . Whenever we click on any category we change the index , and ShowItem becomes true for that particular index only and it becomes false for previously opened category.because it is react right...it will check our dom with vritual dom for making changes...
+https://react.dev/learn/sharing-state-between-components#lifting-state-up-by-example ....visit this to understand more about lifting state up ....And coming to the ternary operator...it took me damn 2 hours to figure out the solution...for the question
+If we click on already opened restaurandCard..it should close....that's it..and i got the solution after messing up the whole code and correcting it again
+
+15.1 ---> Here it will print Default User , as it is not updating the userName - Mukhesh ...... We tied our userName (state variable) to the UserContext...so whenever the state Var changes , loggedInUser in UserContext will changes
+********** i passed setUserName in there to change the userName if we want , from anywhere **********
+************************************* you can literally use this for login authentication... ******************************
+15.2 ---> passing a value to loggedInUser , anywhere can be accessed...it will print Mukhesh 
+15.3 --->  Here it will print shiva instead of Mukhesh 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

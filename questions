@@ -1,0 +1,120 @@
+1. Why is react also called as library of javascript
+   A. Because react can even use in small part of the html code , like we use libraries in programming..
+
+2. Difference btw carat and tilde in dependies present in package.json
+   A. carat (^) - it can automatically install versions of small change like minor updates in versions ,
+   tilde (~) : it can automatically install versions of big change like major updates in versions .
+   Eg for ^ : old version : ^2.8.10 --> new version ^2.8.11
+   Eg for ~ : old version : ~2.8.10 --> new version ^3.8.10
+
+3. What can parcel do ?
+   A. Parcel works great for building single or multi-page React applications
+
+4. Whats is JSX ?
+   A. JSX is nothing but React.createElement().. means it simplifies the syntax..by allowing to write html syntax rather than creating React.createElement()..
+   NOTE : whatever you wrote in JSX ... it looks like HTML ..but it is note html
+
+5. If you wrote something in JSX , who will convert the code to React.createElement() ---> then object....
+   A . Babel
+   // GO to babel website .. and see how it is converting
+
+6. What is babel ?
+   A. Babel is a js compiler , Babel can convert JSX syntax to react element !
+
+7. what is used to integrate React componenets into web application by rendering them ?
+   or
+   who will render react components into web application ?
+
+A. ReactDOM
+
+8. Why do you think the class attribute in html is replaced with className in JSX ? why can't we just use "class" same as we did in html ??
+   A. Because class is reserved keyword in javascript.. it makes conflicts if we write it as attribute.. jsx could'nt able to understand whether it is attribute or keyword.
+
+9. see above ques first then --> But we can use class attribute instead of className in JSX also , why ?
+   A. Because modern versions of React and ReactDOM are designed to handle both HTML and JSX attributes in a flexible manner .
+
+10. What is react component ?
+    A. Everything in a react is component !
+    It consists of two types :
+
+- class based component
+- functional component
+
+11. Why should i create react component starting with capital letter only ? why not with small letter ?
+    A. In react , components starting with capital letters are treated as custom components , where as starting with small letters are treated as built-in HTML elements . Starting components with uppercase letters helps React to distinguish between custom components and regular HTML elements .
+
+12. What is functional component ?
+    A. A function which return piece of JSX code is called as funcitonal component .
+
+13. What is component composition ?
+    A. Writing component inside the component .
+
+14. How can you write js code inside the jsx ?
+    A. By using curly braces we can write any piece of js code inside the jsx
+
+15. How can you use React component inside the jsx  
+    A. There are two ways
+    <Component name>
+    {Component()} ---> because functional component is function at the end of the day
+
+16. What is props in react ?
+    A. Passing props to component is nothing but passing argument to function in js . Both are same
+17. Why we need unique keys while looping in jsx ?
+    A.Because if something new adds into the data , react would not know what came new . So it will re render all of them . If we create unique id's for each item in the data , then optimization will increase .
+18. Can we access key through props ? if no why ? if yes how ?
+    A. No , we can't access key through props , because react handles key internally and doesn't pass through props to the component.
+    However, if you want to access the key, then you have to send it externally via props by using another name other than key.
+19. Why react is faster ?
+    A. Because it manipulates DOM very fast
+20. What is react hook ?
+    A. React hook is nothing but javascript utility functions comes with super powers .
+    1. useState()
+    2. useEffect()
+21. whenever a state variable changes or updates , react will re-render our component ? why ?
+    A. Because if we use react hooks in our component , and if any changes made in that variable , react automatically updates our UI along with data .
+22. what is virtual dom and diff algorithm ?
+    A. Virtual Dom is an in memory representation of actual dom or copy of original dom stored in the memory . Whenever a change occurs in state variable , Diff Algorithm compares old and new virtual dom and find out the difference so that we can update only those updated parts , instead of updating the whole dom.
+23. What is React Fiber ?
+    A. It is the new version of diff algorithm .
+    https://github.com/acdlite/react-fiber-architecture
+24. What is optional chaining in js?
+    A.In the chain of object property access we can check that each value is not undefined or null. This check can be extremely useful when accessing deeply nested object values.
+25. What is condition rendering?
+    A. Rendering the page based on the conditionn is called condition rendering .
+26. What happens when state variable changes ?
+    A. Whenever state variable in react changes , the react will automatically re-renders the component .
+27. Who will provide routing configuration to our app ?
+    A. RouterProvider will provide routing config to our app.
+28. How can you put your header in every route ?
+    A. I can put my header in every route by making every component as childs of my appComponent , so whenever an url comes in , then we use an component called "Outlet" provided by reactRouter . This will automatically fills the element or component of particular path .
+29. How to prevent reloading entire page of our UI whenever routing to other page ?
+    A. We can use a component called "Link" which can be imported from react-render-dom , Link component works same as anchor tag in html , but it has "to" instead of "href" . This link will allow user to navigate to other routes without reloading the entire page .
+30. <Link to="">.... In Link , what is "to" refer to ?
+    A. In Link component "to" refers to "prop" which takes the route  path to navigate to .
+31. Example for SPA (single page application) ? and why it is called so ?
+    A. React is a single page application , it is called as spa because , in react we never relods the page , means even in routing , we have components like Link which can prevent reloding the entire browser .
+32. How many types of routings are there?
+    A. There are two types of routings :
+
+        1. Client-side-routing
+        2. Server-side-routing
+           Our react is a client-side-routing .. becoz it is SAP , and doesnot relods the page while routing
+
+    ------------------------IMP ques -------------------------- .
+
+33. why should i give unique key whenever i use map in jsx or whenever i create new elements dynamically ?
+    A. Becoz react uses this key internally to identify each element and decide whether that element has changed or not . If you don't give unique key to the elements then react would confuse which element it should update , and it might re-render the entire list .
+34. What is componentDidMount in react ?
+    A. componentDidMount is present in class Based component and it works like a useEffect (but not same) in functional component . It gets invoked right after our component is rendered into DOM .
+35. What is the disadvantage of SPA ?
+    A. Since single page applications do not have separate pages like normal web apps, and doesn't relod , it loads all the javascript code into our app...let say you have created a setIntervel in componentDidMount or in useEffect in your home page...It will create new setIntervel whenever you visit the home page again...and it keeps doubling,triple and so on every time u visit home page .....we can clean this mess by using componentWillUnmount in class based component and a return function in useEffect (whenever you leave your current page , return function in useEffect will be called).... watch namaste react episode 8 after 2:20:00.....
+36. What is lazyloading ?
+    A. We can load components only when they are needed not at the time of loading whole app . To do that we don't import the component directly , rather we import like this
+    const ComponentName = lazy(()=> import("path"));
+    If we write like this...that means we are splitting our bundle into two js files ...
+    So that we can bundle our js files dynamically .
+37. What is higher order components in react ?
+    A. Higher order component is a function which takes component and returns component
+38. What is controlled and uncontrolled component ?
+    A. If a component controlled by another contolled component then it is known as controlled component .
+    If a component not controlled by any other component then it is known as uncontrolled component .
